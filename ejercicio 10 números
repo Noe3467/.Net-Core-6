@@ -1,0 +1,35 @@
+// ejercicio de la clase 7- martes 17 de mayo.
+Console.WriteLine("Hello, World!");
+Console.WriteLine("Hola, ingresá 10 números cualquiera!"); //paso1
+
+int suma = 0;
+int numeroMayor = 0;
+int numeroMenor = 10000000;
+
+for (int i = 0; i < 10; i++)
+{
+    Console.WriteLine($"ingresá el número: {i + 1}");
+
+    int numero = int.Parse(Console.ReadLine());
+    Console.WriteLine($"ingresaste el número: {numero}"); // paso6
+    suma = suma + numero;
+    Console.WriteLine("");
+
+    if (numero >= numeroMayor)
+    {
+        numeroMayor = numero;  
+    }
+
+    else if (numero <= numeroMenor)
+    {
+        numeroMenor = numero;
+    }
+}
+
+
+Console.WriteLine($"La suma de todos los números es: {suma}"); //paso2
+Console.WriteLine($"El número mayor es: {numeroMayor}"); //paso3
+Console.WriteLine($"El número menor es: {numeroMenor}"); //paso4
+
+float promedio = suma/10;
+Console.WriteLine($"El promedio es: {promedio}"); //paso5
